@@ -1,0 +1,96 @@
+import { isAuthenticated } from "@/lib/authentication";
+import { connectDB } from "@/lib/databaseConnection";
+import { catchError, response } from "@/lib/helperFunction";
+import UserModel from "@/models/user.model";
+
+export async function PUT(request) {
+  try {
+    const auth = await isAuthenticated("admin");
+    if (!auth?.isAuth) {
+      return response(false, 403, "Unauthorized.");
+    }
+
+    await connectDB();
+    const payload = await request.json();
+
+    const ids = payload.ids || [];
+    const deleteType = payload.deleteType;
+
+    if (!Array.isArray(ids) || ids.length === 0) {
+      return response(false, 400, "Invalid or empty id list.");
+    }
+
+    const users = await UserModel.find({ _id: { $in: ids } }).lean();
+    if (!users.length) {
+      return response(false, 404, "Data not found.");
+    }
+
+    if (!["SD", "RSD"].includes(deleteType)) {
+      return response(
+        false,
+        400,
+        "Delete Type should be SD (Soft Delete) or RSD (Restore)."
+      );
+    }
+
+    if (deleteType === "SD") {
+      await UserModel.updateMany(
+        { _id: { $in: ids } },
+        { $set: { deletedAt: new Date() } }   // ✅ FIXED
+      );
+    } else {
+      await UserModel.updateMany(
+        { _id: { $in: ids } },
+        { $set: { deletedAt: null } }         // ✅ FIXED
+      );
+    }
+
+    return response(
+      true,
+      200,
+      deleteType === "SD"
+        ? "Users moved to trash."
+        : "Users restored successfully."
+    );
+  } catch (error) {
+    return catchError(error);
+  }
+}
+
+export async function DELETE(request) {
+  try {
+    const auth = await isAuthenticated("admin");
+    if (!auth?.isAuth) {
+      return response(false, 403, "Unauthorized.");
+    }
+
+    await connectDB();
+    const payload = await request.json();
+
+    const ids = payload.ids || [];
+    const deleteType = payload.deleteType;
+
+    if (!Array.isArray(ids) || ids.length === 0) {
+      return response(false, 400, "Invalid or empty id list.");
+    }
+
+    const users = await UserModel.find({ _id: { $in: ids } }).lean();
+    if (!users.length) {
+      return response(false, 404, "Data not found.");
+    }
+
+    if (deleteType !== "PD") {
+      return response(
+        false,
+        400,
+        "Delete Type should be PD (Permanent Delete)."
+      );
+    }
+
+    await UserModel.deleteMany({ _id: { $in: ids } });
+
+    return response(true, 200, "Users deleted permanently.");
+  } catch (error) {
+    return catchError(error);
+  }
+}
