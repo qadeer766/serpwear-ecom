@@ -8,35 +8,22 @@
 ![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white)
 
 
-<h3 align="center">🛍️ 🛒 Next.js 15 E-Commerce Website — Modern Full-Stack Online Store</h3>
+<h3 align="center">🛍️ 🛒 Next.js 16 E-Commerce Website — Modern Full-Stack Online Store</h3>
 
 </div>
-
 <div>
+This project is a modern, full-featured <b>eCommerce website built with Next.js 15 (App Router)</b>, optimized for performance, SEO, and responsiveness. It showcases a production-grade frontend built with <b>Tailwind CSS</b>, <b>MUI (Material UI)</b>, and <b>Radix UI</b>, combined with secure backend integrations using <b>MongoDB</b>, <b>Mongoose</b>, and <b>JWT authentication</b>.
 
-This project is a production-grade <b>eCommerce platform built with Next.js 15 (App Router)</b>, engineered for scalability, performance, and modern web standards. The application leverages a component-driven architecture with <b>React</b>, styled using <b>Tailwind CSS</b>, <b>Material UI (MUI)</b>, and <b>Radix UI</b> to deliver a highly responsive, accessible, and maintainable user interface.
+<br>
 
-<br><br>
-
-The backend infrastructure is powered by <b>MongoDB</b> with <b>Mongoose</b> for efficient schema modeling and database interactions. Secure user authentication and protected application routes are implemented using <b>JWT-based authentication</b>, enabling reliable session management and role-based access for both users and administrators.
-
-<br><br>
-
-The platform includes a fully functional <b>Admin Dashboard</b> that allows administrators to manage products, orders, and users through a structured and intuitive interface. Rich product descriptions are supported through <b>CKEditor 5</b>, enabling dynamic content creation and enhanced product presentation.
-
-<br><br>
-
-For modern data management and optimized client-server communication, the application integrates <b>React Query</b> for efficient server-state caching, background refetching, and API synchronization, while <b>Redux Toolkit</b> is used to manage complex global application state.
-
-<br><br>
-
-Payments are securely processed through <b>Stripe</b>, providing a reliable and scalable payment infrastructure suitable for production environments. Media assets such as product images are managed using <b>Cloudinary</b>, ensuring optimized image delivery and cloud-based storage.
-
-<br><br>
-
-Built with clean architecture principles and modern development practices, this project demonstrates a real-world eCommerce implementation suitable for production deployment, client solutions, or advanced developer portfolios.
+Core functionalities include user authentication, product management, admin dashboard, rich product descriptions (via CKEditor 5), and payment integration using **Stipe**. The site uses **React Query** for powerful data-fetching and caching, **Redux Toolkit** for global state management, and **Cloudinary** for seamless media handling. Designed for scalability and clean code architecture, this project is ideal for portfolio, client work, or production use.
 
 </div>
+
+## 🔗 Project Demo & Source Code
+
+🚀 **Live Demo**: [Click here to view the project](https://serpwear-ecom.vercel.app)
+
 
 ## 📸 Screenshots
 
