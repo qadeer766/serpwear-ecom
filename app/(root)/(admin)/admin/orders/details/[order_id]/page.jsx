@@ -1,7 +1,7 @@
 "use client";
 
-import { WEBSITE_PRODUCT_DETAILS, WEBSITE_SHOP } from "@/routes/WebsiteRoute";
-import { ADMIN_DASHBOARD, ADMIN_ORDER_SHOW } from "@/routes/AdminPanelRoute";
+import { WEBSITE_PRODUCT_DETAILS } from "@/routes/WebsiteRoute";
+
 
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +13,7 @@ import imgPlaceholder from "@/public/assets/images/img-placeholder.webp";
 import useFetch from "@/hooks/useFetch";
 import Select from "@/components/Application/Select";
 import ButtonLoading from "@/components/Application/ButtonLoading";
-import WebsiteBreadcrumb from "@/components/Application/Website/WebsiteBreadcrumb";
+
 
 import { showToast } from "@/lib/showToast";
 import axios from "axios";

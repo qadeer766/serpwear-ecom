@@ -1,6 +1,6 @@
 "use client";
 
-import WebsiteBreadcrumb from "@/components/Application/website/WebsiteBreadcrumb";
+import WebsiteBreadcrumb from "@/components/Application/Website/WebsiteBreadcrumb";
 import { Button } from "@/components/ui/button";
 import {
   WEBSITE_CHECKOUT,

@@ -1,7 +1,7 @@
 "use client";
 
 import ButtonLoading from "@/components/Application/ButtonLoading";
-import WebsiteBreadcrumb from "@/components/Application/website/WebsiteBreadcrumb";
+import WebsiteBreadcrumb from "@/components/Application/Website/WebsiteBreadcrumb";
 import { Button } from "@/components/ui/button";
 import { Form, FormField, FormItem, FormControl } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";

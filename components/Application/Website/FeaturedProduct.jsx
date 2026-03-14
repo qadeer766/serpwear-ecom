@@ -13,7 +13,7 @@ const FeaturedProduct = async () => {
     );
 
     const productData = await res.json();
-
+  
 
     if (!productData?.success || !productData?.data?.length) {
       return null;
