@@ -1,6 +1,6 @@
 "use client";
 
-import WebsiteBreadcrumb from "@/components/Application/website/WebsiteBreadcrumb";
+import WebsiteBreadcrumb from "@/components/Application/Website/WebsiteBreadcrumb";
 import { WEBSITE_PRODUCT_DETAILS, WEBSITE_SHOP } from "@/routes/WebsiteRoute";
 
 import Image from "next/image";
