@@ -12,11 +12,11 @@
 
 </div>
 <div>
-This project is a modern, full-featured <b>eCommerce website built with Next.js 15 (App Router)</b>, optimized for performance, SEO, and responsiveness. It showcases a production-grade frontend built with <b>Tailwind CSS</b>, <b>MUI (Material UI)</b>, and <b>Radix UI</b>, combined with secure backend integrations using <b>MongoDB</b>, <b>Mongoose</b>, and <b>JWT authentication</b>.
+This project is a modern, full-featured <b>eCommerce website built with Next.js 16 (App Router)</b>, optimized for performance, SEO, and responsiveness. It showcases a production-grade frontend built with <b>Tailwind CSS</b>, <b>MUI (Material UI)</b>, and <b>Radix UI</b>, combined with secure backend integrations using <b>MongoDB</b>, <b>Mongoose</b>, and <b>JWT authentication</b>.
 
 <br>
 
-Core functionalities include user authentication, product management, admin dashboard, rich product descriptions (via CKEditor 5), and payment integration using **Stipe**. The site uses **React Query** for powerful data-fetching and caching, **Redux Toolkit** for global state management, and **Cloudinary** for seamless media handling. Designed for scalability and clean code architecture, this project is ideal for portfolio, client work, or production use.
+Core functionalities include user authentication, product management, admin dashboard, rich product descriptions (via CKEditor 5), and payment integration using **Stripe**. The site uses **React Query** for powerful data-fetching and caching, **Redux Toolkit** for global state management, and **Cloudinary** for seamless media handling. Designed for scalability and clean code architecture, this project is ideal for portfolio, client work, or production use.
 
 </div>
 
